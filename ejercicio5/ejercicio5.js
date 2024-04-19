@@ -5,3 +5,18 @@
 //número.
 
 //const numeroSecreto = Math.floor(Math.random() * 100) + 1;
+
+
+const dataFromConsole = process.argv;
+
+let numeroSecreto = Math.floor(Math.random() * 100) + 1;
+
+while (numeroSecreto < 101) {
+    if (numeroSecreto == dataFromConsole){
+        console.log("Adivina el numero: ")
+        const number = +dataFromConsole[2];
+    }else{
+        console.log("sigue intentando, el numero era: ",numeroSecreto);
+        const number = +dataFromConsole[2];
+    }numeroSecreto++;
+}
